@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "8ca2d6cc-9274-4598-81fc-c8d7fc19914f",
+		"name": "Movies Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15471173"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LOCALHOST}}/api",
+					"host": [
+						"{{LOCALHOST}}"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LOCALHOST}}/api/movies",
+					"host": [
+						"{{LOCALHOST}}"
+					],
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LOCALHOST}}/api/movie?name=Clube daluta ",
+					"host": [
+						"{{LOCALHOST}}"
+					],
+					"path": [
+						"api",
+						"movie"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Clube daluta "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Budapest\",\n    \"year\": \"2003\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LOCALHOST}}/api/movie",
+					"host": [
+						"{{LOCALHOST}}"
+					],
+					"path": [
+						"api",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "LOCALHOST",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
