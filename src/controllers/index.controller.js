@@ -1,5 +1,5 @@
 const standAlive = (request, response) => {
-  response.send("I'm Alive!")
+  response.statusCode(200).send("I'm Alive!")
 }
 
 module.exports = {
